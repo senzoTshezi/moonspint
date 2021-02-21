@@ -1,0 +1,12 @@
+<div class="container">
+    <div class="row">
+      <div *ngFor="let game of games "  >
+        <div *ngFor="let categories of game.categories " >
+          <div *ngIf="categories == 'live'" class="col shadow p-1 mb-5 bg-white rounded">
+            <img src="{{game.image}}">
+          </div>
+        </div>
+      </div>
+    </div>
+    <br>
+  </div>

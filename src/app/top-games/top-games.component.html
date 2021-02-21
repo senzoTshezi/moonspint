@@ -1,0 +1,17 @@
+<div class="container">
+    <div class="row">
+      <div *ngFor="let game of games "  >
+        <div *ngFor="let categories of game.categories " >
+          <div id="MyImage" *ngIf="categories == 'top'" class="col shadow p-1 mb-5 bg-white rounded ribbon ribbon-top-right">
+            <img id="theImage" src="{{game.image}}" > <span>top</span>  
+            <button id="myButton" class="only-show-on-hover btn-primary">{{game.name}}</button>
+            <div *ngFor="let jackpot of jackpot">
+              <p id="japort" *ngIf=" jackpot.game ==  game.id"> £{{jackpot.amount}}</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <br>
+    
+  </div>
